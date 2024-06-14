@@ -1,0 +1,57 @@
+let borda=30;
+
+function setup() {
+  createCanvas(600, 418);
+  background("yellow");
+  stroke('magenta');
+  strokeWeight(4);
+  line(100, 300, 550,300);
+  stroke ("blue");
+  strokeWeight(2);
+  fill ("red");
+  textSize(40);
+  text('Olivia Conceição',100,350);
+        }
+
+function draw() {
+    // console.log(mouseIsPressed);  
+    if (mouseIsPressed)
+         {
+       rect(mouseX, mouseY, 5,5);
+         
+       noStroke();
+      
+       fill("red");
+      // Give all corners a radius of 15.
+      rect(350, 30, 200, 50, 15);
+      textSize(25);
+      fill ("white");
+      textAlign(CENTER);
+      text('Enviar dados',450,63);
+          
+      fill("red");
+      rect(350, 100, 200, 50, 15);            
+      textSize(25);
+      fill ("white");
+      textAlign(CENTER);
+      text('Salvar dados',450,133); 
+           
+      noFill()
+      stroke ("blue");
+      strokeWeight(9);
+      rect(350, borda, 200, 50, 15);
+      
+      stroke ("blue");
+      strokeWeight(3);
+
+
+}
+
+       if (mouseX>=350 && mouseX<=550 && mouseY>=30 && mouseY<=80) 
+      borda=30;
+      else if (mouseX>=350 && mouseX<=550 && mouseY>=100 && mouseY<=150) 
+      borda=100;  
+            }
+
+    
+    
